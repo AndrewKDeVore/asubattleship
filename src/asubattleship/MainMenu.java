@@ -19,10 +19,9 @@ public class MainMenu {
                 JButton playButton = new JButton("Play Game");
                 JButton creditsButton = new JButton("Credits");
 
-                JLabel sparkyPic = new JLabel("Boom");
+                JLabel sparkyPic = new JLabel(new ImageIcon("battleship.jpg"));
 
-                // Define ActionListener
-                ActionListener actionListener = new ActionListener() {
+                ActionListener playListener = new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         System.out.println("We're gonna play the game.");
@@ -30,15 +29,23 @@ public class MainMenu {
                     }
                 };
 
+                ActionListener creditsListener = new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        System.out.println("We're gonna list the credits.");
+
+                    }
+                };
                 // Attach listener
-                playButton.addActionListener(actionListener);
+                playButton.addActionListener(playListener);
+                creditsButton.addActionListener(creditsListener);
 
                 frame.add(sparkyPic, BorderLayout.NORTH);
                 frame.add(playButton, BorderLayout.CENTER);
                 frame.add(creditsButton, BorderLayout.SOUTH);
                 // center the window
                 frame.setLocationRelativeTo(null);
-                frame.setSize(300, 100);
+                frame.setSize(420, 300);
                 frame.setVisible(true);
             }
         };
