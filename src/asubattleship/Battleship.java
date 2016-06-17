@@ -22,7 +22,7 @@ class MainMenu {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						System.out.println("We're gonna play the game.");
-						new PlayGame().getClass();
+						new PlayGame().getClass(); 
 					}
 				};
 
