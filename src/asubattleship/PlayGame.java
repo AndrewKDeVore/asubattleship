@@ -67,29 +67,6 @@ public class PlayGame extends JFrame implements MouseListener{
     }
 
     /**
-     * Draws the 'Welcome to Battleship' screen.
-     */
-    /*private void drawTitleScreen() {
-        // Get an object representing the area within the window borders.
-        Container clientArea = this.getContentPane();
-
-        // Get the Graphics object associated with the client area.
-        Graphics gfx = clientArea.getGraphics();
-
-        // Get the size of the client area.
-        int width = clientArea.getWidth();
-        int height = clientArea.getHeight();
-
-        gfx.setColor(Color.black);
-        gfx.fillRect(0, 0, width, height);
-
-        gfx.setColor(Color.green);
-        gfx.drawString("BATTLESHIP", TITLE_X, TITLE_Y);
-        gfx.setColor(Color.gray);
-        gfx.drawString("(click mouse to continue)", MOUSE_MSG_X, MOUSE_MSG_Y);
-    }*/
-
-    /**
      * Draw the game grids.
      */
     private void drawGrids() {
