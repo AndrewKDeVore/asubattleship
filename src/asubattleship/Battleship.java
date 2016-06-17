@@ -4,9 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-class MainMenu {
-
+class MainMenu{
+    
 	public void runMenu() {
 		Runnable runner = new Runnable() {
 			@Override
@@ -19,10 +21,12 @@ class MainMenu {
 				JLabel sparkyPic = new JLabel(new ImageIcon("battleship.jpg"));
 
 				ActionListener playListener = new ActionListener() {
+
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						System.out.println("We're gonna play the game.");
-
+				        new PlayGame().getClass();
+				    
 					}
 				};
 
@@ -47,18 +51,25 @@ class MainMenu {
 			}
 		};
 		EventQueue.invokeLater(runner);
+			
 	}
+	
+
 }
 
-public class Battleship {
+public class Battleship{
 
+        
 	public static void main(String[] args) {
 		MainMenu menu = new MainMenu();
 		menu.runMenu();
+
 		System.out.println("Hello World!");
 		System.out.println("Hello World");
 
 
 	}
 
+
+	
 }
