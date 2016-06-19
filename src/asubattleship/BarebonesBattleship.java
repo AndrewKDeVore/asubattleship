@@ -40,10 +40,8 @@ class GameState implements ActionListener {
 
     /* Game states
        0 - start of game. player places ship
-       0 -> 1 (transition) cpu places ship
-       1 - player takes turn (no hit, transition to 2)
-       2 - cpu takes turn (no hit, transition back to 1)
-       3 - Game over, someone got a hit!
+       1 - cycling of turns, player 1 goes first, then CPU, until
+           someone has their ship sunk.
      */
     int gameState = 0;
 
