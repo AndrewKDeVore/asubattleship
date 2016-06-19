@@ -14,7 +14,9 @@ class Tile extends JButton {
         super(text);
 
         // This is what shows up in the tile button text
-        setText("Tile: " + text);
+        setText("Water");
+        setBackground(Color.BLUE);
+        setOpaque(true);
 
         // Define the name so that even if we update the
         // text of the button we can still identify it
@@ -47,7 +49,8 @@ class GameState implements ActionListener {
 
     Tile[] playerTiles;
     Tile[] cpuTiles;
-    JTextArea stepText =  new JTextArea("Place your ship on the left board.");
+    JTextArea stepText =  new JTextArea("Pick a tile to place your ship " +
+                                        "in within the left side of tiles.");
     Tile playerShip;
     Tile cpuShip;
 
@@ -97,7 +100,7 @@ class GameState implements ActionListener {
                 actionTile.setBackground(Color.RED);
                 actionTile.setOpaque(true);
             } else {
-                stepText.setText("No dice!");
+                stepText.setText("You missed!");
                 actionTile.setText("Miss");
                 actionTile.setBackground(Color.CYAN);
                 actionTile.setOpaque(true);
