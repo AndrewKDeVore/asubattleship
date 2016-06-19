@@ -124,7 +124,6 @@ class GameState implements ActionListener {
         }
     }
 
-
     public JTextArea getStepText() {
         return stepText;
     }
