@@ -104,6 +104,19 @@ class GameState implements ActionListener {
                 actionTile.setText("Miss");
                 actionTile.setBackground(Color.CYAN);
                 actionTile.setOpaque(true);
+                // CPU turn
+                stepText.setText(stepText.getText() + " CPU fires salvo!");
+                Tile randomShot = pickRandomTile(playerTiles);
+                if (randomShot.equals(playerShip)) {
+                    stepText.setText("CPU sunk you!!!");
+                    playerShip.setBackground(Color.RED);
+                    playerShip.setOpaque(true);
+                } else {
+                    randomShot.setBackground(Color.CYAN);
+                    randomShot.setText("Miss");
+                    stepText.setText(stepText.getText() + " And misses. Take another shot.");
+                }
+
             }
 
         } else if (actionTile.getTileType() == "player") {
