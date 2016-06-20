@@ -64,7 +64,6 @@ class GameState implements ActionListener {
         // have to make sure we never generate events from
         // anything but tiles, otherwise bugs will ensure...
         Tile actionTile = (Tile) ae.getSource();
-        System.out.println(actionTile.getTileType());
 
         // if we're in the earliest state where the player needs
         // to pick a tile to place their ship on
@@ -85,8 +84,6 @@ class GameState implements ActionListener {
             stepText.setText("CPU placed their ship. See if you can guess where.");
             // time to take a shot
             gameState += 1;
-            // debug statement
-            System.out.println(cpuShip);
 
         } else if (gameState == 0){
             stepText.setText("Doh. You need to pick a tile from the player "
